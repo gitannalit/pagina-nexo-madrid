@@ -966,7 +966,7 @@ export default function Home() {
             <div className="block">
               <button onClick={scrollToForm} className="btn-gold-outline rounded-xl px-10 py-5 text-base font-black tracking-widest inline-flex items-center gap-2">
                 <Zap className="w-5 h-5" />
-                QUIERO MI PLAZA POR 97€
+                QUIERO MI PLAZA POR 97��
               </button>
             </div>
             <p className="text-gray-500 text-xs mt-3">Solo {totalPlazas} plazas disponibles · Proceso de selección</p>
@@ -1236,13 +1236,13 @@ export default function Home() {
 
       {/* ── STICKY BOTTOM BAR ── */}
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-t border-[#C9A84C]/20 py-3 shadow-2xl">
-        <div className="container flex items-center justify-between gap-4">
+        <div className="container flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <div className="flex items-center gap-3 min-w-0">
             <div className="w-8 h-8 rounded-full bg-[#C9A84C] flex items-center justify-center shrink-0">
               <span className="text-[#0a0a0a] font-black text-xs">N</span>
             </div>
             <div className="min-w-0">
-              <div className="text-white font-bold text-sm truncate">Nexo Dubái - Madrid · 26-27 Abril 2026</div>
+              <div className="text-white font-bold text-xs sm:text-sm truncate">Nexo Dubái - Madrid · 26-27 Abril 2026</div>
               <div className="text-gray-400 text-xs hidden sm:block truncate">
                 Solo {totalPlazas - placasOcupadas} plazas · Optimización fiscal · Networking +200 empresarios
               </div>
@@ -1250,7 +1250,7 @@ export default function Home() {
           </div>
           <button
             onClick={scrollToForm}
-            className="btn-gold rounded-lg px-5 py-2.5 text-xs font-black tracking-wider shrink-0 flex items-center gap-1.5"
+            className="btn-gold rounded-lg px-4 sm:px-5 py-2.5 text-xs font-black tracking-wider shrink-0 flex items-center gap-1.5 w-full sm:w-auto justify-center"
           >
             <Zap className="w-3.5 h-3.5" />
             RESERVAR MI PLAZA AHORA
@@ -1259,7 +1259,7 @@ export default function Home() {
       </div>
 
       {/* Bottom padding for sticky bar */}
-      <div className="h-16" />
+      <div className="h-32 sm:h-20" />
     </div>
   );
 }
