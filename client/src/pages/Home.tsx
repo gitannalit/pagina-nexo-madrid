@@ -213,9 +213,13 @@ function AnimatedNumber({ value, suffix = "" }: { value: string; suffix?: string
 // ─── Main Page ─────────────────────────────────────────────────────────────────
 export default function Home() {
   const [activeTab, setActiveTab] = useState<"conseguiras" | "incluye">("conseguiras");
-  const [placasOcupadas] = useState(13);
-  const [totalPlazas] = useState(20);
+  const [placasOcupadas] = useState(50);
+  const [totalPlazas] = useState(200);
   const progressPct = Math.round((placasOcupadas / totalPlazas) * 100);
+  // Plazas VIP: de 100 disponibles, 50 ya reservadas
+  const vipOcupadas = 50;
+  const vipTotal = 100;
+  const vipProgressPct = Math.round((vipOcupadas / vipTotal) * 100);
 
   const scrollToForm = () => {
     document.getElementById("solicitar")?.scrollIntoView({ behavior: "smooth" });
@@ -267,7 +271,6 @@ export default function Home() {
         "Residencia fiscal vs empresa en Dubái: qué te conviene según tu situación",
         "Free Zone vs Mainland: ventajas y desventajas reales para españoles",
         "Sesiones Q&A personalizadas sobre tu caso específico",
-        "Cena de networking de alto nivel con el grupo",
       ],
       icon: <Shield className="w-5 h-5" />,
       img: IMAGES.fiscal,
@@ -358,7 +361,7 @@ export default function Home() {
                 {[
                   { icon: <Clock className="w-4 h-4" />, label: "2 días intensivos" },
                   { icon: <Users className="w-4 h-4" />, label: "+200 empresarios" },
-                  { icon: <Award className="w-4 h-4" />, label: "6 expertos" },
+                  { icon: <MapPin className="w-4 h-4" />, label: "Madrid, Abril 2026" },
                 ].map((stat, i) => (
                   <div key={i} className="flex items-center gap-2 bg-[#111111] border border-[#C9A84C]/20 rounded-full px-4 py-2 text-sm">
                     <span className="text-[#C9A84C]">{stat.icon}</span>
@@ -400,7 +403,7 @@ export default function Home() {
                   <span>4.9/5 (27 reseñas)</span>
                 </div>
                 <span className="text-[#C9A84C]">·</span>
-                <span>Solo {totalPlazas - placasOcupadas} plazas disponibles</span>
+                <span>Plazas limitadas · Solo los primeros 100 formarán parte del Grupo VIP</span>
                 <span className="text-[#C9A84C]">·</span>
                 <span>Proceso de selección</span>
               </div>
@@ -414,15 +417,15 @@ export default function Home() {
               <div className="absolute -bottom-5 -left-5 bg-[#111111] border border-[#C9A84C]/30 rounded-xl p-4 shadow-2xl hidden md:block">
                 <div className="flex items-center gap-3">
                   <div className="flex -space-x-2">
-                    {["C", "M", "A", "R"].map((l, i) => (
+                    {["C", "M", "A", "R", "J"].map((l, i) => (
                       <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C9A84C] to-[#8B7536] flex items-center justify-center text-[#0a0a0a] text-xs font-black border-2 border-[#0a0a0a]">
                         {l}
                       </div>
                     ))}
                   </div>
                   <div>
-                    <div className="text-white text-sm font-bold">+50 empresarios</div>
-                    <div className="text-gray-400 text-xs">ya han confirmado plaza</div>
+                    <div className="text-white text-sm font-bold">+50 plazas reservadas</div>
+                    <div className="text-gray-400 text-xs">Solo primeros 100 → Grupo VIP</div>
                   </div>
                   <div className="ml-2 text-right">
                     <div className="flex">
@@ -449,7 +452,7 @@ export default function Home() {
             <div className="flex flex-col items-center md:items-end gap-2">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-[#C9A84C] animate-pulse" />
-                <span className="text-[#C9A84C] text-sm font-bold">Solo {totalPlazas - placasOcupadas} plazas disponibles</span>
+                <span className="text-[#C9A84C] text-sm font-bold">Plazas limitadas · Primeros 100 → Grupo VIP</span>
               </div>
               <button onClick={scrollToForm} className="btn-gold rounded-lg px-5 py-2.5 text-xs font-black tracking-wider">
                 RESERVAR AHORA
@@ -597,13 +600,14 @@ export default function Home() {
             {/* Bono 1 */}
             <div className="card-dark p-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-[#C9A84C] text-[#0a0a0a] text-xs font-black px-4 py-1.5 rounded-bl-xl tracking-wider">
-                SOLO PRIMEROS 20
+                PRIMEROS 100 ASISTENTES
               </div>
               <div className="w-11 h-11 rounded-xl bg-[#C9A84C]/10 border border-[#C9A84C]/30 flex items-center justify-center mb-4">
                 <Star className="w-5 h-5 text-[#C9A84C]" />
               </div>
               <h3 className="text-xl font-black text-white mb-2 tracking-tight">Acceso EXCLUSIVO al Grupo VIP de Inversión</h3>
-              <p className="text-[#C9A84C] font-bold text-sm mb-4">Valor: €15.000/año — <span className="text-white">GRATIS para ti</span></p>
+              <p className="text-[#C9A84C] font-bold text-sm mb-1">Valor: €15.000/año — <span className="text-white">GRATIS para ti</span></p>
+              <p className="text-gray-400 text-xs mb-4">Solo los primeros 100 asistentes que reserven su plaza formarán parte del Grupo VIP.</p>
               <ul className="space-y-2 mb-5">
                 {[
                   "Deals inmobiliarios verificados con ROI del 8-12% anual",
@@ -618,20 +622,20 @@ export default function Home() {
                 ))}
               </ul>
 
-              <div className="bg-[#1a1a1a] rounded-full p-3 border border-[#C9A84C]/20">
-                <div className="flex justify-between text-xs text-gray-400 mb-2">
-                  <span>Plazas ocupadas:</span>
-                  <span className="text-[#C9A84C] font-bold">{progressPct}%</span>
+              <div className="bg-[#1a1a1a] rounded-xl p-4 border border-[#C9A84C]/30">
+                <div className="flex justify-between text-xs mb-2">
+                  <span className="text-gray-400 font-semibold">Plazas VIP disponibles:</span>
+                  <span className="text-[#C9A84C] font-black">{vipTotal - vipOcupadas} de {vipTotal}</span>
                 </div>
-                <div className="h-2 bg-[#222] rounded-full overflow-hidden">
+                <div className="h-2.5 bg-[#222] rounded-full overflow-hidden">
                   <div
                     className="h-full bg-gradient-to-r from-[#C9A84C] to-[#D4AF37] rounded-full progress-fill"
-                    style={{ width: `${progressPct}%` }}
+                    style={{ width: `${vipProgressPct}%` }}
                   />
                 </div>
                 <div className="flex justify-between text-xs mt-2">
-                  <span className="text-gray-400">{placasOcupadas} de {totalPlazas} plazas</span>
-                  <span className="text-[#C9A84C] font-bold">¡Solo quedan {totalPlazas - placasOcupadas}!</span>
+                  <span className="text-gray-500">{vipOcupadas} plazas VIP ya reservadas</span>
+                  <span className="text-[#C9A84C] font-bold animate-pulse">¡Quedan {vipTotal - vipOcupadas}!</span>
                 </div>
               </div>
 
@@ -683,7 +687,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-black mb-3 tracking-tight">
               Historias De Éxito Reales
             </h2>
-            <p className="text-gray-400">Más de 50 empresarios hispanohablantes ya han transformado su patrimonio con Nexo</p>
+            <p className="text-gray-400">Más de 50 empresarios hispanohablantes ya han transformado su visión fiscal y patrimonial con Nexo</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
@@ -832,7 +836,7 @@ export default function Home() {
                 ASEGURA TU PLAZA POR 97€
               </button>
               <div className="flex items-center justify-center gap-4 mt-3 text-xs text-gray-400">
-                <span className="flex items-center gap-1"><Check className="w-3.5 h-3.5 text-[#C9A84C]" /> Solo {totalPlazas} plazas disponibles</span>
+                <span className="flex items-center gap-1"><Check className="w-3.5 h-3.5 text-[#C9A84C]" /> Plazas limitadas · Primeros 100 → Grupo VIP</span>
                 <span className="flex items-center gap-1"><Check className="w-3.5 h-3.5 text-[#C9A84C]" /> Evento verificado</span>
               </div>
             </div>
@@ -966,10 +970,10 @@ export default function Home() {
             <div className="block">
               <button onClick={scrollToForm} className="btn-gold-outline rounded-xl px-10 py-5 text-base font-black tracking-widest inline-flex items-center gap-2">
                 <Zap className="w-5 h-5" />
-                QUIERO MI PLAZA POR 97��
+                QUIERO MI PLAZA POR 97€
               </button>
             </div>
-            <p className="text-gray-500 text-xs mt-3">Solo {totalPlazas} plazas disponibles · Proceso de selección</p>
+            <p className="text-gray-500 text-xs mt-3">Plazas limitadas · Solo los primeros 100 formarán parte del Grupo VIP</p>
           </div>
         </div>
       </section>
@@ -1103,7 +1107,7 @@ export default function Home() {
               <div className="hidden sm:block h-14 w-px bg-[#C9A84C]/20" />
               <div>
                 <div className="text-white font-black text-lg">Precio de lanzamiento</div>
-                <div className="text-gray-400 text-sm">Ahorra 53€ · Solo {totalPlazas - placasOcupadas} plazas disponibles</div>
+                <div className="text-gray-400 text-sm">Ahorra 53€ · Plazas limitadas · Primeros 100 → Grupo VIP</div>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {["✓ 2 días intensivos", "✓ +200 empresarios", "✓ Bonos incluidos"].map((f, i) => (
                     <span key={i} className="text-[#C9A84C] text-xs font-semibold">{f}</span>
@@ -1116,7 +1120,7 @@ export default function Home() {
               <div className="flex items-center justify-between mb-5">
                 <h3 className="text-xl font-black text-white tracking-tight">Solicitar Plaza Ahora</h3>
                 <div className="bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-full px-3 py-1 text-[#C9A84C] text-xs font-bold">
-                  Solo {totalPlazas - placasOcupadas} plazas
+                  Plazas limitadas
                 </div>
               </div>
 
@@ -1223,8 +1227,8 @@ export default function Home() {
                 <div className="text-[#C9A84C] text-xs font-bold tracking-widest">26-27 ABRIL 2026</div>
               </div>
             </div>
-            <div className="text-center text-gray-500 text-xs">
-              <p>Solo {totalPlazas - placasOcupadas} plazas disponibles · Hotel 5★ · Networking exclusivo</p>
+              <div className="text-center text-gray-500 text-xs">
+              <p>Plazas limitadas · Solo los primeros 100 formarán parte del Grupo VIP · Hotel 5★</p>
               <p className="mt-1">© 2026 Nexo Dubái - Madrid · Todos los derechos reservados</p>
             </div>
             <button onClick={scrollToForm} className="btn-gold rounded-lg px-6 py-3 text-sm font-black tracking-wider">
@@ -1236,21 +1240,21 @@ export default function Home() {
 
       {/* ── STICKY BOTTOM BAR ── */}
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-t border-[#C9A84C]/20 py-3 shadow-2xl">
-        <div className="container flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+        <div className="container flex items-center justify-between gap-4">
           <div className="flex items-center gap-3 min-w-0">
             <div className="w-8 h-8 rounded-full bg-[#C9A84C] flex items-center justify-center shrink-0">
               <span className="text-[#0a0a0a] font-black text-xs">N</span>
             </div>
             <div className="min-w-0">
-              <div className="text-white font-bold text-xs sm:text-sm truncate">Nexo Dubái - Madrid · 26-27 Abril 2026</div>
+              <div className="text-white font-bold text-sm truncate">Nexo Dubái - Madrid · 26-27 Abril 2026</div>
               <div className="text-gray-400 text-xs hidden sm:block truncate">
-                Solo {totalPlazas - placasOcupadas} plazas · Optimización fiscal · Networking +200 empresarios
+                Plazas limitadas · Primeros 100 → Grupo VIP · Networking +200 empresarios
               </div>
             </div>
           </div>
           <button
             onClick={scrollToForm}
-            className="btn-gold rounded-lg px-4 sm:px-5 py-2.5 text-xs font-black tracking-wider shrink-0 flex items-center gap-1.5 w-full sm:w-auto justify-center"
+            className="btn-gold rounded-lg px-5 py-2.5 text-xs font-black tracking-wider shrink-0 flex items-center gap-1.5"
           >
             <Zap className="w-3.5 h-3.5" />
             RESERVAR MI PLAZA AHORA
@@ -1259,7 +1263,7 @@ export default function Home() {
       </div>
 
       {/* Bottom padding for sticky bar */}
-      <div className="h-32 sm:h-20" />
+      <div className="h-16" />
     </div>
   );
 }
