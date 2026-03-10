@@ -367,6 +367,20 @@ export default function Home() {
                 ))}
               </div>
 
+              {/* Price badge */}
+              <div className="flex items-center gap-3 bg-[#111111] border border-[#C9A84C]/30 rounded-2xl px-5 py-4 w-fit">
+                <div className="text-center">
+                  <div className="text-gray-500 text-xs font-bold tracking-wider line-through">150€</div>
+                  <div className="text-[#C9A84C] text-3xl font-black tracking-tight leading-none">97€</div>
+                  <div className="text-[#C9A84C] text-[10px] font-black tracking-widest mt-0.5">OFERTA EXCLUSIVA</div>
+                </div>
+                <div className="h-10 w-px bg-[#C9A84C]/20" />
+                <div className="text-sm">
+                  <div className="text-white font-bold">Precio de lanzamiento</div>
+                  <div className="text-gray-400 text-xs">Ahorra 53€ · Plazas limitadas</div>
+                </div>
+              </div>
+
               <div className="flex flex-col sm:flex-row gap-4 pt-1">
                 <button
                   onClick={scrollToForm}
@@ -551,10 +565,18 @@ export default function Home() {
           )}
 
           <div className="text-center mt-8">
-            <button onClick={scrollToForm} className="btn-gold-outline rounded-xl px-8 py-4 text-sm font-black tracking-widest inline-flex items-center gap-2">
-              <Zap className="w-4 h-4" />
-              SOLICITAR PLAZA AHORA
-            </button>
+            {/* Price reminder */}
+            <div className="inline-flex items-center gap-3 bg-[#111111] border border-[#C9A84C]/30 rounded-full px-6 py-3 mb-5">
+              <span className="text-gray-500 text-sm line-through">150€</span>
+              <span className="text-[#C9A84C] text-2xl font-black tracking-tight">97€</span>
+              <span className="bg-[#C9A84C] text-[#0a0a0a] text-xs font-black px-3 py-1 rounded-full tracking-wider">OFERTA EXCLUSIVA</span>
+            </div>
+            <div className="block">
+              <button onClick={scrollToForm} className="btn-gold-outline rounded-xl px-8 py-4 text-sm font-black tracking-widest inline-flex items-center gap-2">
+                <Zap className="w-4 h-4" />
+                SOLICITAR PLAZA AHORA
+              </button>
+            </div>
             <p className="text-gray-500 text-xs mt-3">Una experiencia valorada en más de 10.000€ · Plazas muy limitadas</p>
           </div>
         </div>
@@ -798,10 +820,16 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="text-center mt-6">
+              <div className="text-center mt-6">
+              {/* Price in metrics section */}
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <span className="text-gray-500 text-base line-through">150€</span>
+                <span className="text-[#C9A84C] text-3xl font-black tracking-tight">97€</span>
+                <span className="bg-[#C9A84C] text-[#0a0a0a] text-xs font-black px-3 py-1.5 rounded-full tracking-wider">OFERTA EXCLUSIVA</span>
+              </div>
               <button onClick={scrollToForm} className="btn-gold-outline rounded-xl px-10 py-5 text-base font-black tracking-widest inline-flex items-center gap-2">
                 <Zap className="w-5 h-5" />
-                ASEGURA TU PLAZA AHORA
+                ASEGURA TU PLAZA POR 97€
               </button>
               <div className="flex items-center justify-center gap-4 mt-3 text-xs text-gray-400">
                 <span className="flex items-center gap-1"><Check className="w-3.5 h-3.5 text-[#C9A84C]" /> Solo {totalPlazas} plazas disponibles</span>
@@ -851,8 +879,8 @@ export default function Home() {
               },
               {
                 num: "04",
-                title: "Llamada Post-Evento (Opcional)",
-                desc: "Tras el evento, si quieres profundizar más, te ofrecemos una llamada de seguimiento para evaluar si el Grupo VIP encaja con tu perfil.",
+                title: "Asesoramiento Post-Evento Individual (Opcional)",
+                desc: "Tras el evento, si lo deseas, te ofrecemos una sesión de asesoramiento individual personalizado para profundizar en tu caso concreto y evaluar los siguientes pasos.",
                 icon: <Users className="w-5 h-5 text-[#C9A84C]" />,
               },
             ].map((step, i) => (
@@ -929,10 +957,16 @@ export default function Home() {
               <Check className="w-4 h-4 text-[#C9A84C]" />
               <span className="text-[#C9A84C] text-sm font-bold">TODO INCLUIDO EN EL EVENTO</span>
             </div>
+            {/* Price inline */}
+            <div className="flex items-center justify-center gap-3 mb-5">
+              <span className="text-gray-500 text-base line-through">150€</span>
+              <span className="text-[#C9A84C] text-3xl font-black tracking-tight">97€</span>
+              <span className="bg-[#C9A84C] text-[#0a0a0a] text-xs font-black px-3 py-1.5 rounded-full tracking-wider">OFERTA EXCLUSIVA</span>
+            </div>
             <div className="block">
               <button onClick={scrollToForm} className="btn-gold-outline rounded-xl px-10 py-5 text-base font-black tracking-widest inline-flex items-center gap-2">
                 <Zap className="w-5 h-5" />
-                QUIERO MI PLAZA AHORA
+                QUIERO MI PLAZA POR 97��
               </button>
             </div>
             <p className="text-gray-500 text-xs mt-3">Solo {totalPlazas} plazas disponibles · Proceso de selección</p>
@@ -1059,6 +1093,25 @@ export default function Home() {
               </p>
             </div>
 
+            {/* Price block above form */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6 bg-[#111111] border border-[#C9A84C]/30 rounded-2xl px-6 py-5">
+              <div className="text-center">
+                <div className="text-gray-500 text-sm font-bold tracking-wider line-through">150€</div>
+                <div className="text-[#C9A84C] text-5xl font-black tracking-tight leading-none">97€</div>
+                <div className="text-[#C9A84C] text-xs font-black tracking-widest mt-1">OFERTA EXCLUSIVA</div>
+              </div>
+              <div className="hidden sm:block h-14 w-px bg-[#C9A84C]/20" />
+              <div>
+                <div className="text-white font-black text-lg">Precio de lanzamiento</div>
+                <div className="text-gray-400 text-sm">Ahorra 53€ · Solo {totalPlazas - placasOcupadas} plazas disponibles</div>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {["✓ 2 días intensivos", "✓ +200 empresarios", "✓ Bonos incluidos"].map((f, i) => (
+                    <span key={i} className="text-[#C9A84C] text-xs font-semibold">{f}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <div className="card-dark p-7">
               <div className="flex items-center justify-between mb-5">
                 <h3 className="text-xl font-black text-white tracking-tight">Solicitar Plaza Ahora</h3>
@@ -1183,13 +1236,13 @@ export default function Home() {
 
       {/* ── STICKY BOTTOM BAR ── */}
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-md border-t border-[#C9A84C]/20 py-3 shadow-2xl">
-        <div className="container flex items-center justify-between gap-4">
+        <div className="container flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <div className="flex items-center gap-3 min-w-0">
             <div className="w-8 h-8 rounded-full bg-[#C9A84C] flex items-center justify-center shrink-0">
               <span className="text-[#0a0a0a] font-black text-xs">N</span>
             </div>
             <div className="min-w-0">
-              <div className="text-white font-bold text-sm truncate">Nexo Dubái - Madrid · 26-27 Abril 2026</div>
+              <div className="text-white font-bold text-xs sm:text-sm truncate">Nexo Dubái - Madrid · 26-27 Abril 2026</div>
               <div className="text-gray-400 text-xs hidden sm:block truncate">
                 Solo {totalPlazas - placasOcupadas} plazas · Optimización fiscal · Networking +200 empresarios
               </div>
@@ -1197,7 +1250,7 @@ export default function Home() {
           </div>
           <button
             onClick={scrollToForm}
-            className="btn-gold rounded-lg px-5 py-2.5 text-xs font-black tracking-wider shrink-0 flex items-center gap-1.5"
+            className="btn-gold rounded-lg px-4 sm:px-5 py-2.5 text-xs font-black tracking-wider shrink-0 flex items-center gap-1.5 w-full sm:w-auto justify-center"
           >
             <Zap className="w-3.5 h-3.5" />
             RESERVAR MI PLAZA AHORA
@@ -1206,7 +1259,7 @@ export default function Home() {
       </div>
 
       {/* Bottom padding for sticky bar */}
-      <div className="h-16" />
+      <div className="h-32 sm:h-20" />
     </div>
   );
 }
