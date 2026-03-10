@@ -462,7 +462,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── BENEFICIOS ── */}
+      {/* ── BENEFICIOS �������─ */}
       <section className="py-14 bg-[#0f0f0f]">
         <div className="container">
           <div className="text-center mb-8">
@@ -600,7 +600,7 @@ export default function Home() {
             {/* Bono 1 */}
             <div className="card-dark p-6 relative overflow-hidden">
               <div className="absolute top-0 right-0 bg-[#C9A84C] text-[#0a0a0a] text-xs font-black px-4 py-1.5 rounded-bl-xl tracking-wider">
-                PRIMEROS 100 ASISTENTES
+                las primeras 100 Plazas
               </div>
               <div className="w-11 h-11 rounded-xl bg-[#C9A84C]/10 border border-[#C9A84C]/30 flex items-center justify-center mb-4">
                 <Star className="w-5 h-5 text-[#C9A84C]" />
