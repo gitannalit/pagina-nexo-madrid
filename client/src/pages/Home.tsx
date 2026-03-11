@@ -216,10 +216,7 @@ export default function Home() {
   const [placasOcupadas] = useState(50);
   const [totalPlazas] = useState(200);
   const progressPct = Math.round((placasOcupadas / totalPlazas) * 100);
-  // Pre-inscripciones VIP: aforo muy reducido
-  const vipOcupadas = 50;
-  const vipTotal = 200;
-  const vipProgressPct = Math.round((vipOcupadas / vipTotal) * 100);
+
 
   const scrollToForm = () => {
     document.getElementById("solicitar")?.scrollIntoView({ behavior: "smooth" });
@@ -232,7 +229,7 @@ export default function Home() {
     },
     {
       q: "¿Qué incluye exactamente el evento?",
-      a: "El evento incluye: sesiones con expertos fiscales internacionales especializados en Dubái, consultoría 1:1 personalizada sobre tu situación fiscal y empresarial, networking con +200 empresarios de alto nivel, presentaciones de oportunidades de inversión inmobiliaria verificadas en Dubái con ROI del 8-12%, acceso al grupo VIP de inversión, y materiales exclusivos del evento. Todo en un venue premium en Madrid."
+      a: "El evento incluye: sesiones con expertos fiscales internacionales especializados en Dubái, consultoría 1:1 personalizada sobre tu situación fiscal y empresarial, networking con +200 empresarios de alto nivel, presentaciones de oportunidades de inversión inmobiliaria verificadas en Dubái con ROI del 8-12%, y materiales exclusivos del evento. Todo en un venue premium en Madrid."
     },
     {
       q: "¿Es legal pagar menos impuestos con Dubái?",
@@ -548,10 +545,9 @@ export default function Home() {
               {[
                 "Sesiones magistrales con expertos fiscales internacionales",
                 "Consultoría 1:1 personalizada sobre tu situación fiscal",
-                "Presentación de oportunidades inmobiliarias verificadas en Dubái",
-                "Networking exclusivo con +200 empresarios de alto nivel",
-                "Acceso al Grupo VIP de Inversión (valor €15.000/año)",
-                "Plan de acción personalizado para los próximos 90 días",
+    "Presentación de oportunidades inmobiliarias verificadas en Dubái",
+    "Networking exclusivo con +200 empresarios de alto nivel",
+    "Plan de acción personalizado para los próximos 90 días",
                 "Materiales exclusivos del evento y documentación legal",
                 "Sesiones Q&A con fiscalistas especializados en España-Dubái",
                 "Acceso de por vida al contenido grabado del evento",
@@ -596,56 +592,8 @@ export default function Home() {
             <div className="h-px flex-1 bg-[#C9A84C]/20" />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
-            {/* Bono 1 */}
-            <div className="card-dark p-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-[#C9A84C] text-[#0a0a0a] text-xs font-black px-4 py-1.5 rounded-bl-xl tracking-wider">
-                Pre-inscripción Especial
-              </div>
-              <div className="w-11 h-11 rounded-xl bg-[#C9A84C]/10 border border-[#C9A84C]/30 flex items-center justify-center mb-4">
-                <Star className="w-5 h-5 text-[#C9A84C]" />
-              </div>
-              <h3 className="text-xl font-black text-white mb-2 tracking-tight">Acceso EXCLUSIVO al Grupo VIP de Inversión</h3>
-              <p className="text-[#C9A84C] font-bold text-sm mb-1">Valor: €15.000/año — <span className="text-white">GRATIS para ti</span></p>
-              <p className="text-gray-400 text-xs mb-4">Acceso exclusivo reservado para quienes se pre-inscriban antes de la apertura oficial de entradas.</p>
-              <ul className="space-y-2 mb-5">
-                {[
-                  "Deals inmobiliarios verificados con ROI del 8-12% anual",
-                  "Oportunidades de inversión privadas no disponibles públicamente",
-                  "Optimización fiscal de 30-40% con estrategias legales probadas",
-                  "Network de alto nivel con inversores que mueven 6-7 cifras",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2 text-gray-300 text-sm">
-                    <Check className="w-4 h-4 text-[#C9A84C] shrink-0 mt-0.5" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="bg-[#1a1a1a] rounded-xl p-4 border border-[#C9A84C]/30">
-                <div className="flex justify-between text-xs mb-2">
-                  <span className="text-gray-400 font-semibold">Pre-inscripciones confirmadas:</span>
-                  <span className="text-[#C9A84C] font-black">{vipOcupadas} de {vipTotal}</span>
-                </div>
-                <div className="h-2.5 bg-[#222] rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-[#C9A84C] to-[#D4AF37] rounded-full progress-fill"
-                    style={{ width: `${vipProgressPct}%` }}
-                  />
-                </div>
-                <div className="flex justify-between text-xs mt-2">
-                  <span className="text-gray-500">{vipOcupadas} plazas ya reservadas</span>
-                  <span className="text-[#C9A84C] font-bold animate-pulse">Quedan pocas</span>
-                </div>
-              </div>
-
-              <button onClick={scrollToForm} className="btn-gold-outline rounded-xl w-full py-4 text-sm font-black tracking-widest mt-5 flex items-center justify-center gap-2">
-                <Zap className="w-4 h-4" />
-                ¡QUIERO MI ACCESO VIP!
-              </button>
-            </div>
-
-            {/* Bono 2 */}
+          <div className="max-w-xl mx-auto">
+            {/* Bono */}
             <div className="card-dark p-6">
               <div className="inline-flex items-center gap-2 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-full px-3 py-1.5 mb-4">
                 <Award className="w-3.5 h-3.5 text-[#C9A84C]" />
