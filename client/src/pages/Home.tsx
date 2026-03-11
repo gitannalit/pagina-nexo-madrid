@@ -351,7 +351,7 @@ export default function Home() {
                 Un fin de semana intensivo donde aprendes a{" "}
                 <span className="text-[#C9A84C] font-semibold">ahorrar 40-50% en impuestos</span>,{" "}
                 <span className="text-[#C9A84C] font-semibold">invertir en Dubái</span> y{" "}
-                <span className="text-[#C9A84C] font-semibold">hacer networking con +200 empresarios</span> de alto nivel.
+                <span className="text-[#C9A84C] font-semibold">hacer networking con +200 empresarios</span>. Incluye sesiones 1:1 personalizadas.
               </p>
 
               <div className="flex flex-wrap gap-2.5">
@@ -368,16 +368,14 @@ export default function Home() {
               </div>
 
               {/* Price badge */}
-              <div className="flex items-center gap-3 bg-[#111111] border border-[#C9A84C]/30 rounded-2xl px-5 py-4 w-fit">
-                <div className="text-center">
-                  <div className="text-gray-500 text-xs font-bold tracking-wider line-through">150€</div>
-                  <div className="text-[#C9A84C] text-3xl font-black tracking-tight leading-none">97€</div>
-                  <div className="text-[#C9A84C] text-[10px] font-black tracking-widest mt-0.5">OFERTA EXCLUSIVA</div>
-                </div>
-                <div className="h-10 w-px bg-[#C9A84C]/20" />
-                <div className="text-sm">
-                  <div className="text-white font-bold">Precio de lanzamiento</div>
-                  <div className="text-gray-400 text-xs">Ahorra 53€ · Reserva antes de agotar aforo</div>
+              <div className="flex flex-col gap-4 bg-[#111111] border border-[#C9A84C]/30 rounded-2xl px-6 py-6 w-fit">
+                <div>
+                  <div className="text-[#C9A84C] text-xs font-black tracking-widest mb-2">OFERTA EXCLUSIVA</div>
+                  <div className="flex items-baseline gap-3">
+                    <div className="text-gray-500 text-lg font-bold tracking-wider line-through">150€</div>
+                    <div className="text-[#C9A84C] text-6xl font-black tracking-tight leading-none">97€</div>
+                  </div>
+                  <div className="text-gray-400 text-xs mt-2">+ Sesiones 1:1 personalizadas incluidas</div>
                 </div>
               </div>
 
@@ -400,7 +398,11 @@ export default function Home() {
                   <span>4.9/5 (27 reseñas)</span>
                 </div>
                 <span className="text-[#C9A84C]">·</span>
-                <span>Evento exclusivo en Madrid · Abril 2026</span>
+                <div className="text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                <span className="text-[#C9A84C]">26-27 Abril 2026</span>
+                <br />
+                <span>Madrid</span>
+              </div>
                 <span className="text-[#C9A84C]">·</span>
                 <span>Proceso de selección</span>
               </div>
