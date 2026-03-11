@@ -400,7 +400,7 @@ export default function Home() {
                   <span>4.9/5 (27 reseñas)</span>
                 </div>
                 <span className="text-[#C9A84C]">·</span>
-                <span>26-27 de Abril · 2026</span>
+                <span>Evento exclusivo en Madrid · Abril 2026</span>
                 <span className="text-[#C9A84C]">·</span>
                 <span>Proceso de selección</span>
               </div>
@@ -449,7 +449,7 @@ export default function Home() {
             <div className="flex flex-col items-center md:items-end gap-2">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-[#C9A84C] animate-pulse" />
-                <span className="text-[#C9A84C] text-sm font-bold">26-27 de Abril · 2026</span>
+                <span className="text-[#C9A84C] text-sm font-bold">Evento exclusivo en Madrid · Abril 2026</span>
               </div>
               <button onClick={scrollToForm} className="btn-gold rounded-lg px-5 py-2.5 text-xs font-black tracking-wider">
                 RESERVAR AHORA
@@ -576,7 +576,7 @@ export default function Home() {
                 SOLICITAR PLAZA AHORA
               </button>
             </div>
-            <p className="text-gray-500 text-xs mt-3">Una experiencia valorada en más de 10.000€ · 26-27 de Abril</p>
+            <p className="text-gray-500 text-xs mt-3">Una experiencia valorada en más de 10.000€ · Evento exclusivo en Madrid</p>
           </div>
         </div>
       </section>
@@ -784,7 +784,7 @@ export default function Home() {
                 ASEGURA TU PLAZA POR 97€
               </button>
               <div className="flex items-center justify-center gap-4 mt-3 text-xs text-gray-400">
-                <span className="flex items-center gap-1"><Check className="w-3.5 h-3.5 text-[#C9A84C]" /> 26-27 de Abril · 2026</span>
+                <span className="flex items-center gap-1"><Check className="w-3.5 h-3.5 text-[#C9A84C]" /> Evento exclusivo en Madrid · Abril 2026</span>
                 <span className="flex items-center gap-1"><Check className="w-3.5 h-3.5 text-[#C9A84C]" /> Evento verificado</span>
               </div>
             </div>
@@ -921,7 +921,7 @@ export default function Home() {
                 QUIERO MI PLAZA POR 97€
               </button>
             </div>
-            <p className="text-gray-500 text-xs mt-3">26-27 de Abril · 2026</p>
+            <p className="text-gray-500 text-xs mt-3">Evento exclusivo en Madrid · Abril 2026</p>
           </div>
         </div>
       </section>
@@ -1055,7 +1055,7 @@ export default function Home() {
               <div className="hidden sm:block h-14 w-px bg-[#C9A84C]/20" />
               <div>
                 <div className="text-white font-black text-lg">Precio de lanzamiento</div>
-                <div className="text-gray-400 text-sm">Ahorra 53€ · 26-27 de Abril</div>
+                <div className="text-gray-400 text-sm">Ahorra 53€ · Evento exclusivo en Madrid</div>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {["✓ 2 días intensivos", "✓ +200 empresarios", "✓ Bonos incluidos"].map((f, i) => (
                     <span key={i} className="text-[#C9A84C] text-xs font-semibold">{f}</span>
@@ -1176,7 +1176,7 @@ export default function Home() {
               </div>
             </div>
               <div className="text-center text-gray-500 text-xs">
-              <p>26-27 de Abril · Hotel 5★</p>
+              <p>Evento exclusivo en Madrid · Hotel 5★</p>
               <p className="mt-1">© 2026 Nexo Dubái - Madrid · Todos los derechos reservados</p>
             </div>
             <button onClick={scrollToForm} className="btn-gold rounded-lg px-6 py-3 text-sm font-black tracking-wider">
@@ -1196,7 +1196,7 @@ export default function Home() {
             <div className="min-w-0">
               <div className="text-white font-bold text-sm truncate">Nexo Dubái - Madrid · 26-27 Abril 2026</div>
               <div className="text-gray-400 text-xs hidden sm:block truncate">
-                26-27 de Abril 2026 · +200 empresarios
+                Evento exclusivo en Madrid · Abril 2026 · +200 empresarios
               </div>
             </div>
           </div>
