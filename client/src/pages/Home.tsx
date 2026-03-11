@@ -403,7 +403,7 @@ export default function Home() {
                   <span>4.9/5 (27 reseñas)</span>
                 </div>
                 <span className="text-[#C9A84C]">·</span>
-                <span>Aforo muy reducido · Reserva ahora antes de que se abran las entradas al público</span>
+                <span>No esperes · Las plazas se asignan por orden de reserva</span>
                 <span className="text-[#C9A84C]">·</span>
                 <span>Proceso de selección</span>
               </div>
@@ -424,8 +424,8 @@ export default function Home() {
                     ))}
                   </div>
                   <div>
-                    <div className="text-white text-sm font-bold">+50 pre-inscripciones confirmadas</div>
-                    <div className="text-gray-400 text-xs">Aforo reducido · Reserva tu sitio ya</div>
+                    <div className="text-white text-sm font-bold">+50 plazas ya reservadas</div>
+                    <div className="text-gray-400 text-xs">Reserva la tuya antes de que se agoten</div>
                   </div>
                   <div className="ml-2 text-right">
                     <div className="flex">
@@ -452,7 +452,7 @@ export default function Home() {
             <div className="flex flex-col items-center md:items-end gap-2">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-[#C9A84C] animate-pulse" />
-                <span className="text-[#C9A84C] text-sm font-bold">Aforo reducido · Reserva tu plaza antes de que abran las entradas</span>
+                <span className="text-[#C9A84C] text-sm font-bold">Plazas por orden de reserva · No esperes</span>
               </div>
               <button onClick={scrollToForm} className="btn-gold rounded-lg px-5 py-2.5 text-xs font-black tracking-wider">
                 RESERVAR AHORA
@@ -580,7 +580,7 @@ export default function Home() {
                 SOLICITAR PLAZA AHORA
               </button>
             </div>
-            <p className="text-gray-500 text-xs mt-3">Una experiencia valorada en más de 10.000€ · Aforo muy reducido, reserva antes de que abran las entradas</p>
+            <p className="text-gray-500 text-xs mt-3">Una experiencia valorada en más de 10.000€ · Plazas por orden de reserva</p>
           </div>
         </div>
       </section>
@@ -634,8 +634,8 @@ export default function Home() {
                   />
                 </div>
                 <div className="flex justify-between text-xs mt-2">
-                  <span className="text-gray-500">{vipOcupadas} asistentes ya confirmados</span>
-                  <span className="text-[#C9A84C] font-bold animate-pulse">Aforo llenándose</span>
+                  <span className="text-gray-500">{vipOcupadas} plazas ya reservadas</span>
+                  <span className="text-[#C9A84C] font-bold animate-pulse">Quedan pocas</span>
                 </div>
               </div>
 
@@ -836,7 +836,7 @@ export default function Home() {
                 ASEGURA TU PLAZA POR 97€
               </button>
               <div className="flex items-center justify-center gap-4 mt-3 text-xs text-gray-400">
-                <span className="flex items-center gap-1"><Check className="w-3.5 h-3.5 text-[#C9A84C]" /> Aforo reducido · Reserva tu plaza antes de la apertura oficial</span>
+                <span className="flex items-center gap-1"><Check className="w-3.5 h-3.5 text-[#C9A84C]" /> Plazas por orden de reserva · No esperes</span>
                 <span className="flex items-center gap-1"><Check className="w-3.5 h-3.5 text-[#C9A84C]" /> Evento verificado</span>
               </div>
             </div>
@@ -849,12 +849,12 @@ export default function Home() {
         <div className="container">
           <div className="flex items-center justify-center gap-2 mb-4">
             <div className="bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded-full px-4 py-2 text-[#C9A84C] text-xs font-bold tracking-wider">
-              AFORO REDUCIDO · RESERVA ANTES DE QUE ABRAN LAS ENTRADAS
+              PLAZAS POR ORDEN DE RESERVA
             </div>
           </div>
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-black mb-3 tracking-tight">
-              Proceso de Admisión
+              Así de sencillo
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-sm">
               Simple y directo. Solicita tu plaza, confirmamos por email y nos vemos en Madrid.
@@ -973,7 +973,7 @@ export default function Home() {
                 QUIERO MI PLAZA POR 97€
               </button>
             </div>
-            <p className="text-gray-500 text-xs mt-3">Aforo reducido · Reserva tu plaza ahora, antes de que se abran las entradas al público</p>
+            <p className="text-gray-500 text-xs mt-3">Plazas por orden de reserva · No esperes</p>
           </div>
         </div>
       </section>
@@ -1107,7 +1107,7 @@ export default function Home() {
               <div className="hidden sm:block h-14 w-px bg-[#C9A84C]/20" />
               <div>
                 <div className="text-white font-black text-lg">Precio de lanzamiento</div>
-                <div className="text-gray-400 text-sm">Ahorra 53€ · Aforo reducido · Reserva antes de la apertura al público</div>
+                <div className="text-gray-400 text-sm">Ahorra 53€ · Plazas por orden de reserva</div>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {["✓ 2 días intensivos", "✓ +200 empresarios", "✓ Bonos incluidos"].map((f, i) => (
                     <span key={i} className="text-[#C9A84C] text-xs font-semibold">{f}</span>
@@ -1228,7 +1228,7 @@ export default function Home() {
               </div>
             </div>
               <div className="text-center text-gray-500 text-xs">
-              <p>Aforo reducido · Reserva tu plaza antes de la apertura oficial de entradas · Hotel 5★</p>
+              <p>Plazas por orden de reserva · Hotel 5★</p>
               <p className="mt-1">© 2026 Nexo Dubái - Madrid · Todos los derechos reservados</p>
             </div>
             <button onClick={scrollToForm} className="btn-gold rounded-lg px-6 py-3 text-sm font-black tracking-wider">
@@ -1248,7 +1248,7 @@ export default function Home() {
             <div className="min-w-0">
               <div className="text-white font-bold text-sm truncate">Nexo Dubái - Madrid · 26-27 Abril 2026</div>
               <div className="text-gray-400 text-xs hidden sm:block truncate">
-                Aforo reducido · Reserva ahora antes de la apertura al público · +200 empresarios
+                Plazas por orden de reserva · No esperes · +200 empresarios
               </div>
             </div>
           </div>
