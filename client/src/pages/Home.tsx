@@ -334,9 +334,22 @@ export default function Home() {
                 <span className="text-[#C9A84C] text-xs font-bold tracking-wider">EVENTO VALIDADO POR +50 EMPRESARIOS EXITOSOS</span>
               </div>
 
-              <div className="flex items-center gap-2 text-[#C9A84C] text-sm font-semibold">
-                <Calendar className="w-4 h-4" />
-                <span>25 Y 26 DE ABRIL DE 2026 · MADRID</span>
+              <div className="flex flex-col gap-1.5">
+                <div className="flex items-center gap-2 text-[#C9A84C] text-sm font-semibold">
+                  <Calendar className="w-4 h-4 shrink-0" />
+                  <span>25 Y 26 DE ABRIL DE 2026 · MADRID</span>
+                </div>
+                <div className="flex items-center gap-3 ml-6">
+                  <div className="flex items-center gap-1.5 bg-[#C9A84C]/10 border border-[#C9A84C]/25 rounded-full px-3 py-1">
+                    <Clock className="w-3 h-3 text-[#C9A84C]" />
+                    <span className="text-[#C9A84C]/80 text-[11px] font-bold tracking-widest">9:00 – 14:00</span>
+                  </div>
+                  <span className="text-[#C9A84C]/30 text-xs">·</span>
+                  <div className="flex items-center gap-1.5 bg-[#C9A84C]/10 border border-[#C9A84C]/25 rounded-full px-3 py-1">
+                    <Clock className="w-3 h-3 text-[#C9A84C]" />
+                    <span className="text-[#C9A84C]/80 text-[11px] font-bold tracking-widest">16:00 – 21:00</span>
+                  </div>
+                </div>
               </div>
 
               <h1 className="text-4xl md:text-5xl xl:text-6xl font-black leading-[1.05] tracking-tight">
