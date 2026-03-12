@@ -24,6 +24,7 @@ import {
   Clock,
   MapPin,
   Calendar,
+  Info,
 } from "lucide-react";
 
 // ─── Image URLs ────────────────────────────────────────────────────────────────
@@ -228,7 +229,7 @@ export default function Home() {
     },
     {
       q: "¿Qué incluye exactamente el evento?",
-      a: "El evento incluye: sesiones con expertos fiscales internacionales especializados en Dubái, networking con +200 empresarios de alto nivel, presentación de oportunidades inmobiliarias verificadas en Dubái con ROI del 8-20%, y asesoramiento post-evento individual opcional. Todo en un venue premium en Madrid."
+      a: "El evento incluye: sesiones con expertos fiscales internacionales especializados en Dubái, networking con +200 empresarios de alto nivel, presentación de oportunidades inmobiliarias verificadas en Dubái con ROI del 8-20%, y asesoramiento post-evento individual opcional. Todo en un venue premium en Madrid. El precio de la entrada no incluye alojamiento en hotel ni manutención; cada asistente gestiona su propio alojamiento y comidas de forma independiente."
     },
     {
       q: "¿Es legal pagar menos impuestos con Dubái?",
@@ -550,22 +551,30 @@ export default function Home() {
           )}
 
           {activeTab === "incluye" && (
-            <div className="grid md:grid-cols-2 gap-3 max-w-3xl mx-auto">
-              {[
-                "Sesiones magistrales con expertos fiscales internacionales",
-                "Presentación de oportunidades inmobiliarias verificadas en Dubái",
-                "Networking exclusivo con +200 empresarios de alto nivel",
-                "Plan de acción personalizado para los próximos 90 días",
-                "Sesiones Q&A con fiscalistas especializados en España-Dubái",
-                "Consultoría post-evento individual opcional",
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 bg-[#111111] border border-[#C9A84C]/15 rounded-xl p-4">
-                  <div className="w-5 h-5 rounded-full bg-[#C9A84C]/20 border border-[#C9A84C]/40 flex items-center justify-center shrink-0 mt-0.5">
-                    <Check className="w-3 h-3 text-[#C9A84C]" />
+            <div className="max-w-3xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-3 mb-5">
+                {[
+                  "Sesiones magistrales con expertos fiscales internacionales",
+                  "Presentación de oportunidades inmobiliarias verificadas en Dubái",
+                  "Networking exclusivo con +200 empresarios de alto nivel",
+                  "Plan de acción personalizado para los próximos 90 días",
+                  "Sesiones Q&A con fiscalistas especializados en España-Dubái",
+                  "Consultoría post-evento individual opcional",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3 bg-[#111111] border border-[#C9A84C]/15 rounded-xl p-4">
+                    <div className="w-5 h-5 rounded-full bg-[#C9A84C]/20 border border-[#C9A84C]/40 flex items-center justify-center shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-[#C9A84C]" />
+                    </div>
+                    <span className="text-gray-200 text-sm">{item}</span>
                   </div>
-                  <span className="text-gray-200 text-sm">{item}</span>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="flex items-start gap-3 bg-[#0a0a0a] border border-white/8 rounded-xl px-5 py-4">
+                <Info className="w-4 h-4 text-gray-500 shrink-0 mt-0.5" />
+                <p className="text-gray-500 text-xs leading-relaxed">
+                  El precio de la entrada <span className="text-gray-400 font-semibold">no incluye</span> alojamiento en hotel ni manutención. Cada asistente gestiona su propio alojamiento y comidas de forma independiente.
+                </p>
+              </div>
             </div>
           )}
 
@@ -650,6 +659,7 @@ export default function Home() {
               </button>
             </div>
             <p className="text-gray-500 text-xs mt-3">Precio online · Evento exclusivo en Madrid</p>
+            <p className="text-gray-600 text-[11px] mt-1.5">No incluye alojamiento ni manutención.</p>
           </div>
         </div>
       </section>
