@@ -24,7 +24,6 @@ import {
   Clock,
   MapPin,
   Calendar,
-  Info,
 } from "lucide-react";
 
 // ─── Image URLs ────────────────────────────────────────────────────────────────
@@ -212,7 +211,7 @@ function AnimatedNumber({ value, suffix = "" }: { value: string; suffix?: string
 
 // ─── Main Page ─────────────────────────────────────────────────────────────────
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<"conseguiras" | "incluye">("conseguiras");
+  const [activeTab, setActiveTab] = useState<"conseguiras" | "incluye" | "noincluye">("conseguiras");
   const [placasOcupadas] = useState(50);
   const [totalPlazas] = useState(200);
   const progressPct = Math.round((placasOcupadas / totalPlazas) * 100);
@@ -484,6 +483,7 @@ export default function Home() {
             {[
               { id: "conseguiras", label: "Lo Que Conseguirás" },
               { id: "incluye", label: "Qué Incluye El Evento" },
+              { id: "noincluye", label: "Qué No Incluye" },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -552,7 +552,7 @@ export default function Home() {
 
           {activeTab === "incluye" && (
             <div className="max-w-3xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-3 mb-5">
+              <div className="grid md:grid-cols-2 gap-3">
                 {[
                   "Sesiones magistrales con expertos fiscales internacionales",
                   "Presentación de oportunidades inmobiliarias verificadas en Dubái",
@@ -569,11 +569,25 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div className="flex items-start gap-3 bg-[#0a0a0a] border border-white/8 rounded-xl px-5 py-4">
-                <Info className="w-4 h-4 text-gray-500 shrink-0 mt-0.5" />
-                <p className="text-gray-500 text-xs leading-relaxed">
-                  El precio de la entrada <span className="text-gray-400 font-semibold">no incluye</span> alojamiento en hotel ni manutención. Cada asistente gestiona su propio alojamiento y comidas de forma independiente.
-                </p>
+            </div>
+          )}
+
+          {activeTab === "noincluye" && (
+            <div className="max-w-3xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-3">
+                {[
+                  "Alojamiento en hotel o residencia",
+                  "Comidas y cenas durante el evento",
+                  "Traslados o transporte al venue",
+                  "Vuelos o desplazamientos a Madrid",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3 bg-[#111111] border border-white/8 rounded-xl p-4">
+                    <div className="w-5 h-5 rounded-full bg-white/5 border border-white/15 flex items-center justify-center shrink-0 mt-0.5">
+                      <X className="w-3 h-3 text-gray-500" />
+                    </div>
+                    <span className="text-gray-400 text-sm">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           )}
@@ -598,7 +612,7 @@ export default function Home() {
 
 
 
-      {/* ── AGENDA 2 DÍAS ── */}
+      {/* ── AGENDA 2 DÍAS ─�� */}
       <section className="py-14 bg-[#0a0a0a]">
         <div className="container">
           <div className="text-center mb-8">
@@ -659,7 +673,6 @@ export default function Home() {
               </button>
             </div>
             <p className="text-gray-500 text-xs mt-3">Precio online · Evento exclusivo en Madrid</p>
-            <p className="text-gray-600 text-[11px] mt-1.5">No incluye alojamiento ni manutención.</p>
           </div>
         </div>
       </section>
