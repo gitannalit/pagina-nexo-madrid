@@ -577,11 +577,9 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-3">
                 {[
                   "Alojamiento en hotel o residencia",
-                  "Comidas, cenas o manutención",
+                  "Comidas y cenas durante el evento",
                   "Traslados o transporte al venue",
-                  "Asesoría legal o fiscal personalizada",
-                  "Servicios de consultoría individuales",
-                  "Acceso a eventos privados post-jornada",
+                  "Vuelos o desplazamientos a Madrid",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 bg-[#111111] border border-white/8 rounded-xl p-4">
                     <div className="w-5 h-5 rounded-full bg-white/5 border border-white/15 flex items-center justify-center shrink-0 mt-0.5">
@@ -614,7 +612,7 @@ export default function Home() {
 
 
 
-      {/* ── AGENDA 2 DÍAS ── */}
+      {/* ── AGENDA 2 DÍAS ─�� */}
       <section className="py-14 bg-[#0a0a0a]">
         <div className="container">
           <div className="text-center mb-8">
