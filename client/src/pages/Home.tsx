@@ -3,7 +3,7 @@
  * Design: Neo-Luxury Premium Dark (Negro profundo + Dorado cálido)
  * Fonts: Geist (misma tipografía que evento-nexodubai.com) — weight 900 headings, -0.03em letter-spacing
  * Colors: #0a0a0a background, #C9A84C/#D4AF37 gold accents, #F5F5F5 text
- * Event: Sábado 26 y Domingo 27 de Abril 2026 — Madrid
+ * Event: Viernes 25 y Sábado 26 de Abril 2026 — Madrid
  */
 
 import { useState, useEffect, useRef } from "react";
@@ -141,7 +141,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 // ─── Countdown Timer ─────────────────────────────────────────────────────────
 function CountdownTimer() {
-  const eventDate = new Date('2026-04-26T09:00:00');
+  const eventDate = new Date('2026-04-25T09:00:00');
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
@@ -248,7 +248,7 @@ export default function Home() {
     },
     {
       q: "¿Cuáles son las fechas exactas?",
-      a: "El evento se celebra el último fin de semana de abril 2026: sábado 26 y domingo 27 de abril. Dos días intensivos en un venue exclusivo en Madrid. Te recomendamos reservar tu plaza lo antes posible."
+      a: "El evento se celebra los días 25 y 26 de abril 2026 en Madrid. Dos días intensivos en un venue exclusivo en Madrid. Te recomendamos reservar tu plaza lo antes posible."
     },
     {
       q: "¿Qué diferencia hay con una formación online?",
@@ -256,10 +256,10 @@ export default function Home() {
     },
   ];
 
-  // 2 días: sábado y domingo
+  // 2 días: viernes y sábado
   const agendaData = [
     {
-      dia: "Sábado 26",
+      dia: "Viernes 25",
       titulo: "Optimización Fiscal y Estructura Internacional",
       items: [
         "Bienvenida exclusiva y networking inicial con los +200 asistentes",
@@ -272,7 +272,7 @@ export default function Home() {
       img: IMAGES.fiscal,
     },
     {
-      dia: "Domingo 27",
+      dia: "Sábado 26",
       titulo: "Inversión, Estrategia y Plan de Acción",
       items: [
         "Presentación de oportunidades inmobiliarias verificadas con ROI 8-20% anual",
@@ -305,7 +305,7 @@ export default function Home() {
           </div>
           <div className="hidden md:flex items-center gap-2 text-xs text-gray-400">
             <Calendar className="w-3.5 h-3.5 text-[#C9A84C]" />
-            <span>26-27 Abril 2026</span>
+            <span>25-26 Abril 2026</span>
             <span className="mx-2 text-[#C9A84C]">·</span>
             <MapPin className="w-3.5 h-3.5 text-[#C9A84C]" />
             <span>Madrid</span>
@@ -336,7 +336,7 @@ export default function Home() {
 
               <div className="flex items-center gap-2 text-[#C9A84C] text-sm font-semibold">
                 <Calendar className="w-4 h-4" />
-                <span>26 Y 27 DE ABRIL DE 2026 · MADRID</span>
+                <span>25 Y 26 DE ABRIL DE 2026 · MADRID</span>
               </div>
 
               <h1 className="text-4xl md:text-5xl xl:text-6xl font-black leading-[1.05] tracking-tight">
@@ -398,7 +398,7 @@ export default function Home() {
                   <span>4.9/5 (27 reseñas)</span>
                 </div>
                 <span className="text-[#C9A84C]">·</span>
-                <span>26-27 Abril 2026 · Madrid</span>
+                <span>25-26 Abril 2026 · Madrid</span>
               </div>
             </div>
 
@@ -439,7 +439,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
               <div className="text-[#C9A84C] text-xs font-bold tracking-widest mb-1">CUENTA ATRÁS PARA EL EVENTO</div>
-              <div className="text-white text-sm font-semibold">26 de Abril 2026 · Madrid</div>
+              <div className="text-white text-sm font-semibold">25-26 de Abril 2026 · Madrid</div>
             </div>
             <CountdownTimer />
             <div className="flex flex-col items-center md:items-end gap-2">
@@ -1101,7 +1101,7 @@ export default function Home() {
               </div>
               <div>
                 <div className="font-black text-white text-lg tracking-tight">NEXO DUBÁI - MADRID</div>
-                <div className="text-[#C9A84C] text-xs font-bold tracking-widest">26-27 ABRIL 2026</div>
+                <div className="text-[#C9A84C] text-xs font-bold tracking-widest">25-26 ABRIL 2026</div>
               </div>
             </div>
               <div className="text-center text-gray-500 text-xs">
@@ -1123,7 +1123,7 @@ export default function Home() {
               <span className="text-[#0a0a0a] font-black text-xs">N</span>
             </div>
             <div className="min-w-0">
-              <div className="text-white font-bold text-sm truncate">Nexo Dubái - Madrid · 26-27 Abril 2026</div>
+              <div className="text-white font-bold text-sm truncate">Nexo Dubái - Madrid · 25-26 Abril 2026</div>
               <div className="text-gray-400 text-xs hidden sm:block truncate">
                 Optimización fiscal 40-50% · Networking +200 empresarios · Madrid Abril 2026
               </div>
