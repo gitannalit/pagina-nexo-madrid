@@ -256,10 +256,10 @@ export default function Home() {
     },
   ];
 
-  // 2 días: viernes y sábado
+  // 2 días: sábado y domingo
   const agendaData = [
     {
-      dia: "Viernes 24",
+      dia: "Sábado 25",
       titulo: "Optimización Fiscal y Estructura Internacional",
       items: [
         "Bienvenida exclusiva y networking inicial con los +200 asistentes",
@@ -272,7 +272,7 @@ export default function Home() {
       img: IMAGES.fiscal,
     },
     {
-      dia: "Sábado 25",
+      dia: "Domingo 26",
       titulo: "Inversión, Estrategia y Plan de Acción",
       items: [
         "Presentación de oportunidades inmobiliarias verificadas con ROI 8-20% anual",
