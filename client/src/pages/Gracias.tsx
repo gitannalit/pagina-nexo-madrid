@@ -100,19 +100,7 @@ export default function Gracias() {
           </p>
         </div>
 
-        {/* Bottom separator */}
-        <div className="gold-divider mt-12 mb-8 mx-auto w-24" />
 
-        {/* Footer note */}
-        <p className="text-gray-600 text-xs leading-relaxed">
-          ¿Tienes alguna pregunta?{" "}
-          <a
-            href="mailto:info@nexodubai.com"
-            className="text-[#C9A84C] hover:text-[#D4AF37] transition-colors font-medium"
-          >
-            Escríbenos
-          </a>
-        </p>
       </div>
     </div>
   );
