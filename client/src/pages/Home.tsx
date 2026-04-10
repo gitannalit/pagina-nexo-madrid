@@ -521,7 +521,7 @@ export default function Home() {
                 {
                   badge: "EXCLUSIVO",
                   title: "Networking de Alto Impacto",
-                  metric: "+200 EMPRESARIOS",
+                  metric: "+50 EMPRESARIOS",
                   desc: "Conecta con empresarios e inversores de alto nivel que multiplican patrimonios. Una red de contactos de primer nivel que puede transformar tu negocio.",
                   img: IMAGES.networking,
                   icon: <Users className="w-6 h-6" />,
