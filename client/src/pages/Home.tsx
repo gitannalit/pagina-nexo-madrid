@@ -46,7 +46,7 @@ function Ticker() {
     "🚀 PAGA MENOS IMPUESTOS LEGALMENTE",
     "🏗️ INVIERTE EN DUBÁI DESDE MADRID",
     "🌍 CREA TU EMPRESA INTERNACIONAL",
-    "⚡ NETWORKING CON +200 EMPRESARIOS",
+    "⚡ NETWORKING CON +50 EMPRESARIOS",
     "🎯 PLAN FISCAL PERSONALIZADO",
     "💰 AHORRA HASTA 50% EN IMPUESTOS",
     "🏆 EVENTO EXCLUSIVO EN MADRID",
@@ -71,7 +71,7 @@ function HeroCarousel() {
   const slides = [
     { img: IMAGES.hero1, caption: "Evento exclusivo en Madrid" },
     { img: IMAGES.hero2, caption: "Invierte en el mercado más dinámico del mundo" },
-    { img: IMAGES.hero3, caption: "Networking con +200 empresarios de alto nivel" },
+    { img: IMAGES.hero3, caption: "Networking con +50 empresarios de alto nivel" },
     { img: IMAGES.hero4, caption: "Optimiza tu fiscalidad legalmente" },
   ];
   const [current, setCurrent] = useState(0);
@@ -228,7 +228,7 @@ export default function Home() {
     },
     {
       q: "¿Qué incluye exactamente el evento?",
-      a: "El evento incluye: sesiones con expertos fiscales internacionales especializados en Dubái, networking con +200 empresarios de alto nivel, presentación de oportunidades inmobiliarias verificadas en Dubái con ROI del 8-20%, y asesoramiento post-evento individual opcional. Todo en un venue premium en Madrid. El precio de la entrada no incluye alojamiento en hotel ni manutención; cada asistente gestiona su propio alojamiento y comidas de forma independiente."
+      a: "El evento incluye: sesiones con expertos fiscales internacionales especializados en Dubái, networking con +50 empresarios de alto nivel, presentación de oportunidades inmobiliarias verificadas en Dubái con ROI del 8-20%, y asesoramiento post-evento individual opcional. Todo en un venue premium en Madrid. El precio de la entrada no incluye alojamiento en hotel ni manutención; cada asistente gestiona su propio alojamiento y comidas de forma independiente."
     },
     {
       q: "¿Es legal pagar menos impuestos con Dubái?",
@@ -362,13 +362,13 @@ export default function Home() {
                 Un fin de semana intensivo donde aprendes a{" "}
                 <span className="text-[#C9A84C] font-semibold">ahorrar 40-50% en impuestos</span>,{" "}
                 <span className="text-[#C9A84C] font-semibold">invertir en Dubái</span> y{" "}
-                <span className="text-[#C9A84C] font-semibold">hacer networking con +200 empresarios</span> de alto nivel.
+                <span className="text-[#C9A84C] font-semibold">hacer networking con +50 empresarios</span> de alto nivel.
               </p>
 
               <div className="flex flex-wrap gap-2.5">
                 {[
                   { icon: <Clock className="w-4 h-4" />, label: "2 días intensivos" },
-                  { icon: <Users className="w-4 h-4" />, label: "+200 empresarios" },
+                  { icon: <Users className="w-4 h-4" />, label: "+50 empresarios" },
                   { icon: <MapPin className="w-4 h-4" />, label: "Madrid, Abril 2026" },
                 ].map((stat, i) => (
                   <div key={i} className="flex items-center gap-2 bg-[#111111] border border-[#C9A84C]/20 rounded-full px-4 py-2 text-sm">
@@ -556,7 +556,7 @@ export default function Home() {
                 {[
                   "Sesiones magistrales con expertos fiscales internacionales",
                   "Presentación de oportunidades inmobiliarias verificadas en Dubái",
-                  "Networking exclusivo con +200 empresarios de alto nivel",
+                  "Networking exclusivo con +50 empresarios de alto nivel",
                   "Plan de acción personalizado para los próximos 90 días",
                   "Sesiones Q&A con fiscalistas especializados en España-Dubái",
                   "Consultoría post-evento individual opcional",
@@ -1059,7 +1059,7 @@ export default function Home() {
                 <div className="text-white font-black text-lg">Precio online</div>
                 <div className="text-gray-400 text-sm">Precio general en sala: 297€</div>
                 <div className="flex flex-wrap gap-2 mt-2">
-                  {["\u2713 2 días intensivos", "\u2713 +200 empresarios", "\u2713 Acceso completo"].map((f, i) => (
+                  {["\u2713 2 días intensivos", "\u2713 +50 empresarios", "\u2713 Acceso completo"].map((f, i) => (
                     <span key={i} className="text-[#C9A84C] text-xs font-semibold">{f}</span>
                   ))}
                 </div>
@@ -1161,7 +1161,7 @@ export default function Home() {
             <div className="min-w-0">
               <div className="text-white font-bold text-sm truncate">Nexo Dubái - Madrid · 25-26 Abril 2026</div>
               <div className="text-gray-400 text-xs hidden sm:block truncate">
-                Optimización fiscal 40-50% · Networking +200 empresarios · Madrid Abril 2026
+                Optimización fiscal 40-50% · Networking +50 empresarios · Madrid Abril 2026
               </div>
             </div>
           </div>
